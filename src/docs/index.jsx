@@ -1,15 +1,11 @@
-import React from 'react';
-import { render } from 'react-dom';
-import MyClass from './../lib/index';
+import Storage from './../lib/index';
 
-import './styles.css';
+// set any type of data
+Storage.set('keyName', { anyKey: 'anyValue', name: 'anyName' });
+Storage.set('num', 1);
 
-function Demo() {
-	return (
-		<>
-			<MyClass />
-		</>
-	);
-}
+// get data from storage
+const data = Storage.get('keyName');
 
-render(<Demo />, document.getElementById('app'));
+console.log(data);
+console.log(Storage.get('num'));

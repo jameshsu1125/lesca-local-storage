@@ -3,21 +3,30 @@
 # Installation
 
 ```sh
-$ npm install <package> --save
+$ npm install lesca-local-storage --save
 ```
 
 # Usage
 
 ```javascript
-import foo from 'foo';
+import Storage from 'lesca-local-storage';
+
+// set any type of data
+Storage.set('keyName', { anyKey: 'anyValue', name: 'anyName' });
+
+// get data from storage
+const { data, timestamp } = Storage.get('keyName');
+
+console.log(data); //{ anyKey: 'anyValue', name: 'anyName' }
+console.log(timestamp); // get milliseconds => (set data time ------> now)
 ```
 
 # Methods
 
-| method | options | description | default |
-| :----- | :-----: | :---------: | ------: |
-
-# Properties
-
-| Properties | type | description | default |
-| :--------- | :--: | :---------: | ------: |
+| method         |   options   |    description     | default |
+| :------------- | :---------: | :----------------: | ------: |
+| set(key, data) | key(string) | set data as a key  |         |
+|                |  data(\*)   |        data        |         |
+| get(key)       | key(string) | get data as a key  |         |
+| remove(key)    | key(string) | remove data by key |         |
+| clear()        |             |   clear all data   |         |

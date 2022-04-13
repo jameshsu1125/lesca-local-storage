@@ -1,6 +1,6 @@
 {
   "name": "lesca-local-storage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "save data convert to base64 width timestamp",
   "main": "lib/index.js",
   "scripts": {

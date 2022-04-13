@@ -1,4 +1,4 @@
-import Storage from './../lib/index';
+import Storage from '../lib/index';
 
 // set any type of data
 Storage.set('keyName', { anyKey: 'anyValue', name: 'anyName' });

@@ -5,6 +5,7 @@ import Storage from '../../lib/index';
 const Demo = () => {
   const [data, setData] = useState({});
   const [storage, setStorage] = useState('');
+  const [decode, setDecode] = useState('');
 
   useEffect(() => {
     const profile = Storage.get('profile');
@@ -61,6 +62,11 @@ const Demo = () => {
         <code>{JSON.stringify(data)}</code>
       </pre>
 
+      <h4>data decoded</h4>
+      <pre>
+        <code>{JSON.stringify(decode)}</code>
+      </pre>
+
       <h4>data in storage</h4>
       <pre>
         <code>{JSON.stringify(storage)}</code>
@@ -69,9 +75,9 @@ const Demo = () => {
         <Button
           onClick={() => {
             Storage.set('profile', data);
-
             const profile = Storage.get('profile');
             setStorage(profile);
+            setDecode(localStorage.getItem('profile'));
           }}
         >
           save

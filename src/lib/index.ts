@@ -92,7 +92,6 @@ const remove = (key: string) => {
 
 /**
  * clear all
- * @param {string} key clear all key
  * @returns boolean
  */
 const clear = () => {

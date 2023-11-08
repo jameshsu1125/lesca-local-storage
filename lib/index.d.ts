@@ -1,4 +1,4 @@
-declare const _default: {
+declare const Storage: {
     checkUsable: () => boolean;
     set: (key: string, data: object) => false | {
         data: object;
@@ -8,4 +8,4 @@ declare const _default: {
     remove: (key: string) => boolean;
     clear: () => boolean;
 };
-export default _default;
+export default Storage;

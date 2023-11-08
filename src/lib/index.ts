@@ -103,4 +103,12 @@ const clear = () => {
   return false;
 };
 
-export default { checkUsable, set, get, remove, clear };
+const Storage = {
+  checkUsable,
+  set,
+  get,
+  remove,
+  clear,
+};
+
+export default Storage;
